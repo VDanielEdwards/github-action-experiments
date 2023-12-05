@@ -8,5 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-tags: true
+          repository: vectorgrp/sil-kit
+          path: sil-kit
+          ref: sil-kit/v4.0.42
       - uses: ./.github/actions/docker-job/
 

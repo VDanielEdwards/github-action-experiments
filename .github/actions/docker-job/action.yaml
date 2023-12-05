@@ -2,4 +2,6 @@
 runs:
   using: docker
   image: docker/Dockerfile
+  args:
+    - scripts/run.sh
 

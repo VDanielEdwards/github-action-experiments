@@ -8,5 +8,5 @@ echo "Runner GID: ${runner_gid}"
 
 useradd --uid "${runner_uid}" --no-user-group --home-dir "$(pwd)" --no-create-home worker
 
-su -c scripts/run.sh - worker
+sudo -E -u worker -- "$@"
 
